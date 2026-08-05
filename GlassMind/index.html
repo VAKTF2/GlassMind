@@ -1,1 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GlassMind</title>
 
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="app">
+
+        <header>
+            <h1>GlassMind</h1>
+            <p>Pure JavaScript Neural Network</p>
+        </header>
+
+        <!-- Chat -->
+        <section id="chat-container">
+
+            <div id="chat">
+                <div class="message ai">
+                    Hello! I'm GlassMind.
+                </div>
+            </div>
+
+            <div id="input-area">
+
+                <input
+                    type="text"
+                    id="prompt"
+                    placeholder="Say something..."
+                    autocomplete="off"
+                >
+
+                <button id="send">
+                    Send
+                </button>
+
+            </div>
+
+        </section>
+
+        <!-- Controls -->
+        <section id="controls">
+
+            <button id="train">
+                Train
+            </button>
+
+            <button id="save">
+                Save Brain
+            </button>
+
+            <button id="load">
+                Load Brain
+            </button>
+
+            <button id="reset">
+                Reset
+            </button>
+
+        </section>
+
+        <!-- Statistics -->
+        <section id="stats">
+
+            <div class="card">
+                <h3>Vocabulary</h3>
+                <span id="wordCount">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Epoch</h3>
+                <span id="epoch">0</span>
+            </div>
+
+            <div class="card">
+                <h3>Loss</h3>
+                <span id="loss">0.000</span>
+            </div>
+
+        </section>
+
+        <!-- Vocabulary -->
+        <section id="vocab-section">
+
+            <h2>Vocabulary</h2>
+
+            <div id="vocabList">
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Hidden file picker -->
+    <input
+        type="file"
+        id="brainFile"
+        accept=".json"
+        hidden
+    >
+
+    <!-- JavaScript -->
+    <script src="js/memory.js"></script>
+    <script src="js/brain.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+</html>
