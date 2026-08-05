@@ -1,0 +1,336 @@
+/* ===========================
+   GlassMind
+   style.css
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    background:#0f172a;
+    color:white;
+
+    font-family:Arial, Helvetica, sans-serif;
+
+    display:flex;
+    justify-content:center;
+
+    padding:30px;
+
+}
+
+#app{
+
+    width:100%;
+    max-width:1000px;
+
+}
+
+header{
+
+    text-align:center;
+    margin-bottom:25px;
+
+}
+
+header h1{
+
+    font-size:40px;
+    margin-bottom:5px;
+
+}
+
+header p{
+
+    color:#94a3b8;
+
+}
+
+#chat-container{
+
+    background:#1e293b;
+
+    border-radius:12px;
+
+    padding:15px;
+
+    border:1px solid #334155;
+
+}
+
+#chat{
+
+    height:450px;
+
+    overflow-y:auto;
+
+    display:flex;
+    flex-direction:column;
+
+    gap:10px;
+
+    padding:10px;
+
+    margin-bottom:15px;
+
+}
+
+/* Scrollbar */
+
+#chat::-webkit-scrollbar{
+
+    width:8px;
+
+}
+
+#chat::-webkit-scrollbar-thumb{
+
+    background:#475569;
+    border-radius:10px;
+
+}
+
+/* Messages */
+
+.message{
+
+    padding:12px 15px;
+
+    border-radius:10px;
+
+    max-width:75%;
+
+    word-wrap:break-word;
+
+    animation:fade .25s;
+
+}
+
+.user{
+
+    align-self:flex-end;
+
+    background:#2563eb;
+
+}
+
+.ai{
+
+    align-self:flex-start;
+
+    background:#374151;
+
+}
+
+@keyframes fade{
+
+    from{
+
+        opacity:0;
+        transform:translateY(8px);
+
+    }
+
+    to{
+
+        opacity:1;
+        transform:translateY(0);
+
+    }
+
+}
+
+/* Input */
+
+#input-area{
+
+    display:flex;
+    gap:10px;
+
+}
+
+#prompt{
+
+    flex:1;
+
+    padding:14px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#0f172a;
+
+    color:white;
+
+    font-size:16px;
+
+    outline:none;
+
+}
+
+#prompt:focus{
+
+    box-shadow:0 0 0 2px #2563eb;
+
+}
+
+button{
+
+    border:none;
+
+    border-radius:8px;
+
+    padding:12px 18px;
+
+    cursor:pointer;
+
+    font-size:15px;
+
+    background:#2563eb;
+
+    color:white;
+
+    transition:.2s;
+
+}
+
+button:hover{
+
+    background:#1d4ed8;
+
+    transform:translateY(-2px);
+
+}
+
+/* Controls */
+
+#controls{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    margin-top:20px;
+
+}
+
+/* Stats */
+
+#stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:15px;
+
+    margin-top:20px;
+
+}
+
+.card{
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:10px;
+
+    padding:20px;
+
+    text-align:center;
+
+}
+
+.card h3{
+
+    margin-bottom:10px;
+
+    color:#94a3b8;
+
+}
+
+.card span{
+
+    font-size:28px;
+
+    font-weight:bold;
+
+}
+
+/* Vocabulary */
+
+#vocab-section{
+
+    margin-top:25px;
+
+}
+
+#vocab-section h2{
+
+    margin-bottom:10px;
+
+}
+
+#vocabList{
+
+    display:flex;
+
+    flex-wrap:wrap;
+
+    gap:10px;
+
+    background:#1e293b;
+
+    border:1px solid #334155;
+
+    border-radius:10px;
+
+    padding:15px;
+
+    min-height:80px;
+
+}
+
+.chip{
+
+    background:#2563eb;
+
+    padding:8px 14px;
+
+    border-radius:999px;
+
+    font-size:14px;
+
+}
+
+/* Mobile */
+
+@media(max-width:700px){
+
+    #stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    #input-area{
+
+        flex-direction:column;
+
+    }
+
+    .message{
+
+        max-width:95%;
+
+    }
+
+}
